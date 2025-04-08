@@ -11,14 +11,14 @@ terraform {
 provider "azurerm" {
   features {
   }
-  subscription_id = "ec89cff3-47cc-42aa-bfbc-bcfeaee71336"
+  subscription_id = "<Subscription-ID>"
 }
 
 
 ###### Backend Configuration ######
 terraform {
   backend "azurerm" {
-    resource_group_name  = "anand.shekhawat02"
+    resource_group_name  = "<Resource-Group>"
     storage_account_name = "tfstate12889"
     container_name       = "tfstate"
     key                  = "dev.terraform.tfstate"
@@ -28,7 +28,7 @@ terraform {
 
 ###### Resource Group ######
 data "azurerm_resource_group" "existing" {
-  name = "anand.shekhawat02"
+  name = "<Resource-Group>"
 }
 
 
